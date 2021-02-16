@@ -1,4 +1,4 @@
-let sentence = `Je suis le ténébreux, - le veuf, - l'inconsolé,
+let text = `Je suis le ténébreux, - le veuf, - l'inconsolé,
 Le prince d'Aquitaine à la tour abolie :
 Ma seule étoile est morte, - et mon luth constellé
 Porte le soleil noir de la Mélancolie.
@@ -15,11 +15,15 @@ J'ai rêvé dans la grotte où nage la sirène...
 Et j'ai deux fois vainqueur traversé l'Achéron ;
 Modulant tour à tour sur la lyre d'Orphée
 Les soupirs de la sainte et les cris de la fée.
-`.split('');
+`;
+
+let textMin = text.toLowerCase();
+let textSplitted = textMin.split('');
 
 // On considère y comme une voyelle
-let vowel = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y'];
+let vowel = ['a', 'e', 'i', 'o', 'u', 'y'];
 
 // programmation fonctionnelle
-console.log(sentence.filter(x => (vowel.includes(x))).length);
+console.log(textSplitted.filter(x => (vowel.includes(x))).length);
 
+console.log(textMin.match(/[aeiouy]/g).length);
