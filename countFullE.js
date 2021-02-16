@@ -15,8 +15,8 @@ J'ai rêvé dans la grotte où nage la sirène...
 Et j'ai deux fois vainqueur traversé l'Achéron ;
 Modulant tour à tour sur la lyre d'Orphée
 Les soupirs de la sainte et les cris de la fée.
-`.split('');
+`.toLowerCase().split('');
 
 
-console.log(sentence.filter(x => (x === 'e' || x === 'E')).length);
+console.log(sentence.filter(x => (x === 'e')).length);
 
